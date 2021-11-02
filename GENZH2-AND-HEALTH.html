@@ -41,16 +41,7 @@
   <div id="form"></div>
   <script type="text/javascript">
 
-    // Show the creditcard type in the field 'help-block' section
-    // Possible values: uatp, amex, diners, discover, mastercard, dankort, instapayment, jcb15, jcb, maestro, visa, mir, unionPay, general, generalStrict, unknown
-    var creditCardTypeChangedHandler = function (type) {
-      var el = this.element.nextSibling;
-      if (el && el.classList.contains('help-block')) {
-        el.innerHTML = 'Card type: <strong>' + type + '</strong>';
-      }
-    }
-
-    var options = {
+    const options = {
       "theme": "bootstrap4",
       "template": "handlebars",
       "iconlib": "fontawesome5",
@@ -194,8 +185,8 @@
       }
     }
 
-    var element = document.getElementById('form');
-    var editor = new JSONEditor(element, options);
+    const element = document.getElementById('form');
+    const editor = new JSONEditor(element, options);
 
   </script>
 </body>
